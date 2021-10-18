@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: kali
+spec:
+    containers:
+    - image: $IMAGENAME
+      name: kali
+      args: attack $DOMAINS
+      volumeMounts:
+      - mountPath: /work
+        name: work-volume
+    volumes:
+    - name: work-volume
+      awsElasticBlockStore:
+        volumeID: $VOLUME-ID
+        fsType: ext4

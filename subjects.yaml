@@ -1,0 +1,9 @@
+iterableVars:
+- $DOMAINS
+$DOMAINS:
+- example.org
+- example.com
+- test.example.ftw
+staticVars:
+  $IMAGENAME: kali-linux
+  $VOLUME-ID: vol-09ae9ec414652700c
